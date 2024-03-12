@@ -10,22 +10,17 @@ st.set_page_config(page_title="App Demo", page_icon="📹")
 st.markdown("# App Demo")
 st.sidebar.header("App Demo")
 st.write(
-    """This page has the actual demo and the database connection. 
+    """Choose a gene to see related information.
     """
 )
 
-def demo():
-    @st.cache_data
-    def get_data():
-        #replace AWS bucket and csv name
-        AWS_BUCKET_URL = "https://streamlit-demo-data.s3-us-west-2.amazonaws.com"
-        df = pd.read_csv("https://github.com/wesleywchang/2024-capstone-gene-nlp/blob/main/fine_tuning_dataset/fine_tuning_dataset_v1.2/finetuning_training_data/processed/in_vivo_gene_perturbations_test_sample1k_random.csv")
-        return df.set_index("id")
-    
-    data = get_data()
+genes_data = pd.read_csv("https://raw.githubusercontent.com/wesleywchang/2024-capstone-gene-nlp/main/fine_tuning_dataset/fine_tuning_dataset_v1.2/finetuning_training_data/processed/in_vivo_gene_perturbations_test_sample1k_random.csv?token=GHSAT0AAAAAACMV4AR5P7IUZIB5K4RVCZEWZPQSYLQ")
 
-    
+bygenes = genes_data.set_index(['label'])
+gp = st.selectbox("Choose label", list(bygenes.index))
+st.write("You selected:", gp)
+gpdata = bygenes.loc[gp]
+st.write(bygenes.sort_index())
 
-demo()
 
-#show_code(dademo)
+
