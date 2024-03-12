@@ -20,32 +20,16 @@ LOGGER = get_logger(__name__)
 
 def run():
     st.set_page_config(
-        page_title="Hello",
+        page_title="Home",
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    st.write("# Welcome to PathoGeneMap! 👋")
 
-    st.sidebar.success("Select a demo above.")
+    st.sidebar.success("PLACEHOLDER")
 
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
-
-
+    st.write("Our mission is to Empower biomedical researchers with AI-enhanced exploration of disease causing genes.")
+    st.write("Imagine a future in drug discovery where decisions are made not by chance, but through precision and data. Introducing PathoGeneMap—a groundbreaking tool that uses AI to navigate the complex landscape of disease-causing genes. The biomedical field is rich with experiments outlining genes’ roles in diseases, yet this critical information is locked away in dense literature. My experience as an MDPhD, manually reviewing 3,000 abstracts for data on just 100 genes, highlights the daunting task researchers face. PathoGeneMap addresses this challenge by leveraging AI to sift through 35 million biomedical papers to present the exact information researchers need. PathoGeneMap empowers researchers worldwide to make informed decisions, accelerating the development of new treatments for patients.")
+    
 if __name__ == "__main__":
     run()
