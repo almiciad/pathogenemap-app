@@ -9,8 +9,12 @@ from streamlit.hello.utils import show_code
 st.set_page_config(page_title="App Demo", page_icon="📹")
 st.markdown("# App Demo")
 st.sidebar.header("App Demo")
+
+st.metric(label="Abstracts Available", value=3000) 
+st.metric(label="Pertubations Found", value=1000) 
+
 st.write(
-    """Choose a gene to see related information.
+    """Use the drop down to select  a gene to see related information. Click the value to read the full abstract.
     """
 )
 
@@ -23,14 +27,13 @@ def data_frame_demo():
 
     try:
         df = get_UN_data()
-        countries = st.multiselect(
-            "Choose perbutation", list(df.index)
+        genes = st.multiselect(
+            "Choose perbutation", list(df.index), ["No specific gene was perturbed in vivo"]
         )
-        if not countries:
-            st.error("Please select at least one country.")
+        if not genes:
+            st.error("Please select at least one value.")
         else:
-            data = df.loc[countries]
-            #data /= 1000000.0
+            data = df.loc[genes]
             st.write("### Gene Information", data.sort_index())
     except URLError as e:
         st.error(
