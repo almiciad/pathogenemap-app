@@ -26,7 +26,6 @@ def run():
 
     st.write("# Welcome to PathoGeneMap! 👋")
 
-    st.sidebar.success("PLACEHOLDER")
 
     st.write("Our mission is to Empower biomedical researchers with AI-enhanced exploration of disease causing genes.")
     st.write("Imagine a future in drug discovery where decisions are made not by chance, but through precision and data. Introducing PathoGeneMap—a groundbreaking tool that uses AI to navigate the complex landscape of disease-causing genes. The biomedical field is rich with experiments outlining genes’ roles in diseases, yet this critical information is locked away in dense literature. My experience as an MDPhD, manually reviewing 3,000 abstracts for data on just 100 genes, highlights the daunting task researchers face. PathoGeneMap addresses this challenge by leveraging AI to sift through 35 million biomedical papers to present the exact information researchers need. PathoGeneMap empowers researchers worldwide to make informed decisions, accelerating the development of new treatments for patients.")
