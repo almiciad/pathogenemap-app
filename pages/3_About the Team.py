@@ -13,35 +13,40 @@ max = '/workspaces/pathogenemap-app/pages/photots/Screenshot 2024-03-12 at 9.11.
 wesley = '/workspaces/pathogenemap-app/pages/photots/Screenshot 2024-03-12 at 9.12.01 AM.png'
 almicia = '/workspaces/pathogenemap-app/pages/photots/Screenshot 2024-03-12 at 9.12.14 AM.png'
 
+#rewrite this into
+st.write("""This project was completed as part of the Berkley MIDS capstone course. 
+         The following teammembers contributed to creating this project.""")
+
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
     st.markdown("### Wesley Chang")
     st.image(wesley)
-    st.write("""this is a short bio for [name]. [name] contributed to the [role] piece of this project
-            Here is one more sentence about [name]. And a closing sentence for good measure. """)
+    st.write("""This is a short bio for [name]. [name] contributed to the [role] piece of this project
+            Here is one more sentence about [name]. [name] can be contacted at [email]  """)
     st.markdown("### Almicia Dunson")
     st.image(almicia)
-    st.write("""this is a short bio for [name]. [name] contributed to the [role] piece of this project
-            Here is one more sentence about [name]. And a closing sentence for good measure. """)
+    st.write("""This is a short bio for [name]. [name] contributed to the [role] piece of this project
+            Here is one more sentence about [name]. [name] can be contacted at [email] """)
     
    
 
 with col2:
     st.markdown("### Andrew Mcall")
     st.image(andrew) 
-    st.write("""this is a short bio for [name]. [name] contributed to the [role] piece of this project
-            Here is one more sentence about [name]. And a closing sentence for good measure. """)
+    st.write("""This is a short bio for [name]. [name] contributed to the [role] piece of this project
+            Here is one more sentence about [name]. [name] can be contacted at [email]  """)
     st.markdown("### Max Kaufman")
     st.image(max)
-    st.write("""this is a short bio for [name]. [name] contributed to the [role] piece of this project
-            Here is one more sentence about [name]. And a closing sentence for good measure. """)
+    st.write("""This is a short bio for [name]. [name] contributed to the [role] piece of this project
+            Here is one more sentence about [name]. [name] can be contacted at [email] """)
 
 with col3:
     st.markdown("### Christian Lee")
     st.image(christian)
     st.write("""this is a short bio for [name]. [name] contributed to the [role] piece of this project
-            Here is one more sentence about [name]. And a closing sentence for good measure. """)
+            Here is one more sentence about [name]. [name] can be contacted at [email]. """)
 
 
 
